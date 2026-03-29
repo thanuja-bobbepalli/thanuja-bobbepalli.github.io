@@ -5,38 +5,16 @@
 
 /* CSS Variables */
 :root {
-    /* Colors - Cyberpunk AI Theme */
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-tertiary: #1a1a2e;
-    --bg-card: #16161e;
+    --bg-primary: #020617;
+    --bg-secondary: #0f172a;
+    --bg-tertiary: #1e293b;
 
-    --primary: #00ff88;
-    --primary-dim: rgba(0, 255, 136, 0.1);
-    --secondary: #00d4ff;
-    --accent: #ff006e;
-    --warning: #ffb800;
+    --primary: #22c55e;
+    --secondary: #10b981;
+    --accent: #4ade80;
 
-    --text-primary: #e0e0e0;
-    --text-secondary: #a0a0a0;
-    --text-muted: #808090;
-
-    --border-color: #2a2a3a;
-    --glow-primary: 0 0 20px rgba(0, 255, 136, 0.3);
-    --glow-secondary: 0 0 20px rgba(0, 212, 255, 0.3);
-
-    /* Typography */
-    --font-mono: 'JetBrains Mono', monospace;
-    --font-sans: 'Space Grotesk', sans-serif;
-
-    /* Spacing */
-    --section-padding: 100px 0;
-    --container-width: 1200px;
-
-    /* Transitions */
-    --transition-fast: 0.2s ease;
-    --transition-normal: 0.3s ease;
-    --transition-slow: 0.5s ease;
+    --text-primary: #d1fae5;
+    --text-secondary: #6ee7b7;
 }
 
 /* Reset & Base */
