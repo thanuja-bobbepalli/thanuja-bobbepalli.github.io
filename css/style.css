@@ -5,35 +5,49 @@
 
 /* CSS Variables */
 :root {
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
-    --bg-tertiary: #334155;
-    --bg-card: #1e293b;
-
-    --primary: #3b82f6;
-    --secondary: #06b6d4;
-    --accent: #8b5cf6;
-
-    --text-primary: #e2e8f0;
-    --text-secondary: #94a3b8;
-
-    --border-color: #334155;
-    
-    --glow-primary: 0 0 20px rgba(0, 255, 136, 0.3);
-    --glow-secondary: 0 0 20px rgba(0, 212, 255, 0.3);
-
-    /* Typography */
-    --font-mono: 'JetBrains Mono', monospace;
-    --font-sans: 'Space Grotesk', sans-serif;
-
+    /* Backgrounds — deeper, more layered than original */
+    --bg-primary:   #030712;
+    --bg-secondary: #0a0f1e;
+    --bg-tertiary:  #111827;
+    --bg-card:      #0d1424;
+ 
+    /* Accent palette — CYAN primary, MAGENTA secondary (vs original green/blue) */
+    --primary:      #00e5ff;
+    --secondary:    #f000ff;
+    --accent:       #ff6b35;
+    --success:      #00ff9d;
+ 
+    /* Dims */
+    --primary-dim:  rgba(0, 229, 255, 0.08);
+    --secondary-dim:rgba(240, 0, 255, 0.08);
+ 
+    /* Text */
+    --text-primary:   #e8f4f8;
+    --text-secondary: #7a9bae;
+    --text-muted:     #3d5a6b;
+ 
+    /* Borders */
+    --border-color:  #1a2a3a;
+    --border-bright: rgba(0, 229, 255, 0.25);
+ 
+    /* Glows */
+    --glow-primary:   0 0 20px rgba(0, 229, 255, 0.4);
+    --glow-secondary: 0 0 20px rgba(240, 0, 255, 0.4);
+    --glow-soft:      0 0 40px rgba(0, 229, 255, 0.12);
+ 
+    /* Typography — different fonts from original */
+    --font-mono: 'Share Tech Mono', monospace;
+    --font-sans: 'Exo 2', sans-serif;
+    --font-display: 'Rajdhani', sans-serif;
+ 
     /* Spacing */
-    --section-padding: 100px 0;
+    --section-padding: 110px 0;
     --container-width: 1200px;
-
+ 
     /* Transitions */
-    --transition-fast: 0.2s ease;
+    --transition-fast:   0.2s ease;
     --transition-normal: 0.3s ease;
-    --transition-slow: 0.5s ease;
+    --transition-slow:   0.6s ease;
 }
 /* Reset & Base */
 *,
