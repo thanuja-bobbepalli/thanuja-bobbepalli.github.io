@@ -1,0 +1,215 @@
+[
+  {
+    "title": "Multi-Utility Chatbot with LangGraph & PDF RAG",
+    "description": "A powerful AI-driven chatbot that combines document retrieval, web search, stock price lookup, and calculations in a single conversational interface.",
+    "category": [
+      "ai-agents",
+      "dl-cv",
+      "data-science",
+      "web-dev"
+    ],
+    "tech": [
+      "Streamlit",
+      "HuggingFace Qwen2.5-7B-Instruct",
+      "LangGraph",
+      "FAISS"
+    ],
+    "github": "https://github.com/thanuja-bobbepalli/Chatbot",
+    "featured": true,
+    "last_updated": "2026-03-26T03:39:35Z"
+  },
+  {
+    "title": "LangGraph Chatbot",
+    "description": "A comprehensive learning guide to build AI chatbots using LangGraph, progressing from basic concepts to advanced features like state management, persistence, UI integration, production monitoring, and more.",
+    "category": [
+      "ai-agents",
+      "dl-cv",
+      "data-science"
+    ],
+    "tech": [
+      "LangGraph",
+      "LangChain",
+      "Streamlit",
+      "SQLite",
+      "FAISS",
+      "LangSmith",
+      "MCP"
+    ],
+    "github": "https://github.com/thanuja-bobbepalli/LangGraph-Chatbot",
+    "featured": true,
+    "last_updated": "2026-03-25T17:41:34Z"
+  },
+  {
+    "title": "Pneumonia Detection System using Deep Learning",
+    "description": "A deep learning-based system for automatic pneumonia detection from chest X-ray images, employing transfer learning with VGG16 and data augmentation. The project includes a detailed implementation and evaluation, leveraging PyTorch and Streamlit for a user-friendly interface.",
+    "category": [
+      "ai-agents",
+      "dl-cv",
+      "data-science",
+      "web-dev"
+    ],
+    "tech": [
+      "PyTorch",
+      "VGG16",
+      "Data Augmentation",
+      "Streamlit"
+    ],
+    "github": "https://github.com/thanuja-bobbepalli/Pneumonia-detection-using-x-ray-images",
+    "featured": true,
+    "last_updated": "2026-03-24T15:33:48Z"
+  },
+  {
+    "title": "LangSmith Comprehensive Learning Path",
+    "description": "A detailed learning path for building and monitoring Large Language Model applications with LangSmith, a powerful observability and evaluation platform.",
+    "category": [
+      "ai-agents",
+      "resources"
+    ],
+    "tech": [
+      "LangSmith",
+      "Python",
+      "LLM Applications",
+      "LangGraph"
+    ],
+    "github": "https://github.com/thanuja-bobbepalli/LangSmith",
+    "featured": true,
+    "last_updated": "2026-03-24T08:02:50Z"
+  },
+  {
+    "title": "Thanuja Bobbepalli",
+    "description": "Professional portfolio showcasing skills in AI, machine learning, web development, and data science.",
+    "category": [
+      "ai-agents",
+      "web-dev",
+      "data-science",
+      "resources"
+    ],
+    "tech": [
+      "Python",
+      "JavaScript",
+      "TensorFlow",
+      "React.js"
+    ],
+    "github": "https://github.com/thanuja-bobbepalli/thanuja-bobbepalli.github.io",
+    "featured": false,
+    "last_updated": "2026-03-27T14:01:21Z"
+  },
+  {
+    "title": "FastAPI",
+    "description": "Project by Thanuja",
+    "category": "web-dev",
+    "tech": [],
+    "github": "https://github.com/thanuja-bobbepalli/FastAPI",
+    "featured": false,
+    "last_updated": "2026-03-24T13:56:32Z"
+  },
+  {
+    "title": "LangGraph: Comprehensive Learning Resource for Agentic AI",
+    "description": "This repository serves as a comprehensive learning resource for Agentic AI and LangGraph workflows, offering foundational concepts, practical examples, and hands-on implementations of various AI workflow patterns.",
+    "category": [
+      "ai-agents",
+      "dl-cv",
+      "data-science",
+      "resources"
+    ],
+    "tech": [
+      "LangGraph",
+      "Agentic AI",
+      "Graph-based Workflows",
+      "State Management"
+    ],
+    "github": "https://github.com/thanuja-bobbepalli/LangGraph",
+    "featured": false,
+    "last_updated": "2026-03-21T13:53:32Z"
+  },
+  {
+    "title": "Langchain",
+    "description": "Project by Thanuja",
+    "category": "web-dev",
+    "tech": [],
+    "github": "https://github.com/thanuja-bobbepalli/Langchain",
+    "featured": false,
+    "last_updated": "2026-03-16T17:56:21Z"
+  },
+  {
+    "title": "RAG_LangChain",
+    "description": "Project by Thanuja",
+    "category": "web-dev",
+    "tech": [],
+    "github": "https://github.com/thanuja-bobbepalli/RAG_LangChain",
+    "featured": false,
+    "last_updated": "2026-03-16T15:06:43Z"
+  },
+  {
+    "title": "Abstract-Extreame-Summarizer",
+    "description": "Project by Thanuja",
+    "category": "web-dev",
+    "tech": [],
+    "github": "https://github.com/thanuja-bobbepalli/Abstract-Extreame-Summarizer",
+    "featured": false,
+    "last_updated": "2026-03-13T11:58:33Z"
+  },
+  {
+    "title": "Nexus-Practice-using-the-Github-code-space",
+    "description": "Since my laptop is not supported to the nexus software , I use git Hub code space to practice Nexus while connect it to 8081 port ",
+    "category": "web-dev",
+    "tech": [],
+    "github": "https://github.com/thanuja-bobbepalli/Nexus-Practice-using-the-Github-code-space",
+    "featured": false,
+    "last_updated": "2026-03-02T03:54:21Z"
+  },
+  {
+    "title": "Kidney-Segmentaion",
+    "description": "Project by Thanuja",
+    "category": "web-dev",
+    "tech": [],
+    "github": "https://github.com/thanuja-bobbepalli/Kidney-Segmentaion",
+    "featured": false,
+    "last_updated": "2026-02-21T04:57:05Z"
+  },
+  {
+    "title": "My_Certificates",
+    "description": "My certificates ",
+    "category": "web-dev",
+    "tech": [],
+    "github": "https://github.com/thanuja-bobbepalli/My_Certificates",
+    "featured": false,
+    "last_updated": "2026-02-02T16:00:11Z"
+  },
+  {
+    "title": "Vision-Transformer-from-scratch-using-PyTorch",
+    "description": "ViT on Mnist dataset ",
+    "category": "web-dev",
+    "tech": [],
+    "github": "https://github.com/thanuja-bobbepalli/Vision-Transformer-from-scratch-using-PyTorch",
+    "featured": false,
+    "last_updated": "2025-09-12T06:35:18Z"
+  },
+  {
+    "title": "Cyber-attack-classification-Using-Network-Traffic-Data",
+    "description": "Project by Thanuja",
+    "category": "web-dev",
+    "tech": [],
+    "github": "https://github.com/thanuja-bobbepalli/Cyber-attack-classification-Using-Network-Traffic-Data",
+    "featured": false,
+    "last_updated": "2025-04-03T13:20:52Z"
+  },
+  {
+    "title": "football-segmentation",
+    "description": "Project by Thanuja",
+    "category": "web-dev",
+    "tech": [],
+    "github": "https://github.com/thanuja-bobbepalli/football-segmentation",
+    "featured": false,
+    "last_updated": "2025-04-03T13:11:45Z"
+  },
+  {
+    "title": "Liver-Segmentation",
+    "description": "Project by Thanuja",
+    "category": "web-dev",
+    "tech": [],
+    "github": "https://github.com/thanuja-bobbepalli/Liver-Segmentation",
+    "featured": false,
+    "last_updated": "2025-04-03T06:11:32Z"
+  }
+]

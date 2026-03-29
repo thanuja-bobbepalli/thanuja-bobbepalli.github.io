@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Thanuja Bobbepalli - AI/ML Enthusiastic,Deep Learning , Computer Vision">
+    <meta name="keywords"
+        content="GenAI, ML Engineer, RAG, LangChain, Python, FastAPI,  Deep Learning, NLP">
+    <meta name="author" content="Thanuja Bobbepalli">
+    <meta name="theme-color" content="#0a0a0f">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Thanuja Bobbepalli | AI/ML Engineer">
+    <meta property="og:description" content="Building Intelligent Systems that Think - RAG, Deep Learning Medical Image Analysis">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thanuja-bobbepalli.github.io">
+    <meta property="og:image" content="assets/images/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Thanuja Bobbepalli | AI/ML Engineer">
+    <meta name="twitter:description" content="Building Intelligent Systems that Think">
+
+    <title>Thanuja Bobbepalli | AI/ML Engineer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/enhanced.css">
+
+    <!-- GitHub Calendar -->
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="loader-content">
+            <div class="loader-brain">
+                <svg viewBox="0 0 100 100" class="brain-svg">
+                    <circle cx="50" cy="50" r="45" class="brain-circle" />
+                    <path class="brain-path" d="M30,50 Q50,20 70,50 Q50,80 30,50" />
+                    <circle cx="35" cy="40" r="5" class="neuron n1" />
+                    <circle cx="65" cy="40" r="5" class="neuron n2" />
+                    <circle cx="50" cy="60" r="5" class="neuron n3" />
+                    <circle cx="40" cy="55" r="3" class="neuron n4" />
+                    <circle cx="60" cy="55" r="3" class="neuron n5" />
+                    <line x1="35" y1="40" x2="65" y2="40" class="synapse" />
+                    <line x1="35" y1="40" x2="50" y2="60" class="synapse" />
+                    <line x1="65" y1="40" x2="50" y2="60" class="synapse" />
+                </svg>
+            </div>
+            <div class="loader-text">
+                <span class="loader-letter">I</span>
+                <span class="loader-letter">N</span>
+                <span class="loader-letter">I</span>
+                <span class="loader-letter">T</span>
+                <span class="loader-letter">I</span>
+                <span class="loader-letter">A</span>
+                <span class="loader-letter">L</span>
+                <span class="loader-letter">I</span>
+                <span class="loader-letter">Z</span>
+                <span class="loader-letter">I</span>
+                <span class="loader-letter">N</span>
+                <span class="loader-letter">G</span>
+                <span class="loader-dots">...</span>
+            </div>
+            <div class="loader-progress">
+                <div class="loader-progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <!-- Neural Network Particle Background -->
+    <canvas id="neural-bg"></canvas>
+
+    <!-- Matrix Rain Effect (Optional) -->
+    <canvas id="matrix-rain" class="matrix-canvas"></canvas>
+
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow"></div>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="theme-toggle" title="Toggle theme">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-logo glitch-wrapper">
+            <span class="terminal-prompt">~$</span> <span class="glitch-text" data-text="thanuja_bobbepalli">Thanuja<span
+                    class="accent">_</span>Bobbepalli</span>
+        </div>
+        <div class="nav-links">
+            <a href="#about" class="nav-link">.about()</a>
+            <a href="#skills" class="nav-link">.skills()</a>
+            <a href="#projects" class="nav-link">.projects()</a>
+            <a href="#experience" class="nav-link">.experience()</a>
+            <a href="#contact" class="nav-link">.contact()</a>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#about" class="mobile-link">.about()</a>
+        <a href="#skills" class="mobile-link">.skills()</a>
+        <a href="#projects" class="mobile-link">.projects()</a>
+        <a href="#experience" class="mobile-link">.experience()</a>
+        <a href="#contact" class="mobile-link">.contact()</a>
+    </div>
+
+    <!-- Hero Section - Terminal Style -->
+    <section class="hero" id="hero">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="btn-close"></span>
+                    <span class="btn-minimize"></span>
+                    <span class="btn-maximize"></span>
+                </div>
+                <span class="terminal-title">thanuja@portfolio:~</span>
+            </div>
+            <div class="terminal-body">
+                <div class="terminal-line">
+                    <span class="prompt">thanuja@ai:~$</span>
+                    <span class="command typing" id="typing-cmd">whoami</span>
+                </div>
+                <div class="terminal-output" id="terminal-output">
+                    <pre class="ascii-art">
+████████╗██╗  ██╗ █████╗ ███╗   ██╗██╗   ██╗     ██╗ █████╗ 
+╚══██╔══╝██║  ██║██╔══██╗████╗  ██║██║   ██║     ██║██╔══██╗
+   ██║   ███████║███████║██╔██╗ ██║██║   ██║     ██║███████║
+   ██║   ██╔══██║██╔══██║██║╚██╗██║██║   ██║██   ██║██╔══██║
+   ██║   ██║  ██║██║  ██║██║ ╚████║╚██████╔╝╚█████╔╝██║  ██║
+   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚════╝ ╚═╝  ╚═╝
+                    </pre>
+                    <p class="hero-title glitch" data-text="AI/ML Engineer">AI/ML Engineer</p>
+                    <p class="hero-subtitle typewriter">Building a Chatbot that Think</p>
+                    <div class="hero-tags">
+                        <span class="tag">RAG Systems</span>
+                        <span class="tag">LangGraph </span>
+                        <span class="tag"> MCP sever , client </span>
+                        <span class="tag">LangChain</span>
+                    </div>
+                </div>
+                <div class="terminal-line input-line">
+                    <span class="prompt">thanuja@ai:~$</span>
+                    <span class="cursor-blink">_</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+                <i class="fas fa-rocket"></i> Explore Work
+            </a>
+            <a href="assets\all_project_resume.pdf" class="btn btn-secondary" download>
+                <i class="fas fa-download"></i> Download Resume
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <span>scroll down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Agentic Marquee -->
+    <div class="agentic-marquee-container">
+        <div class="marquee-content">
+            <span>⚡️ THIS IS AN AGENTIC PORTFOLIO ⚡️ IT AUTOMATICALLY UPDATES ITS OWN CONTENT ⚡️ NEW GITHUB COMMITS ARE DETECTED VIA GITHUB ACTIONS ⚡️ GEMINI AI ANALYZES THE CODE AND DYNAMICALLY RENDERS NEW PROJECT SUMMARIES HERE ⚡️ ZERO HUMAN INTERVENTION REQUIRED ⚡️</span>
+            <span>⚡️ THIS IS AN AGENTIC PORTFOLIO ⚡️ IT AUTOMATICALLY UPDATES ITS OWN CONTENT ⚡️ NEW GITHUB COMMITS ARE DETECTED VIA GITHUB ACTIONS ⚡️ GEMINI AI ANALYZES THE CODE AND DYNAMICALLY RENDERS NEW PROJECT SUMMARIES HERE ⚡️ ZERO HUMAN INTERVENTION REQUIRED ⚡️</span>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-decorator">&lt;</span>
+                About Me
+                <span class="title-decorator">/&gt;</span>
+            </h2>
+            <div class="about-content">
+                <!-- Profile Photo -->
+                <div class="about-photo">
+                    <div class="photo-wrapper">
+                        <img src="assets/images/profile.jpeg" alt="Thanuja Bobbepalli" class="profile-image">
+                        <div class="photo-border"></div>
+                    </div>
+                    <div class="photo-socials">
+                        <a href="https://github.com/thanuja-bobbepalli" target="_blank" data-tooltip="GitHub"
+                            aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/thanuja-bobbepalli-289651253" target="_blank" data-tooltip="LinkedIn"
+                            aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:thanujabobbepalli@gmail.com" data-tooltip="Email" aria-label="Email Me"><i
+                                class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="file-name">about.py</span>
+                        </div>
+                        <pre class="code-content">
+<span class="keyword">class</span> <span class="class-name">ThanujaBobbepalli</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="param">self</span>):
+        <span class="param">self</span>.name = <span class="string">"ThanujaBobbepalli"</span>
+        <span class="param">self</span>.role = <span class="string">"AI/ML Engineer"</span>
+        <span class="param">self</span>.location = <span class="string">"Andhra Pradesh, India"</span>
+        <span class="param">self</span>.education = <span class="string">"B.Tech ECE @ IIIT Nuzvid"</span>
+        <span class="param">self</span>.cgpa = <span class="number">8.7</span>
+        
+    <span class="keyword">def</span> <span class="function">get_expertise</span>(<span class="param">self</span>):
+        <span class="keyword">return</span> [
+            <span class="string">"RAG Systems "</span>,
+            <span class="string">"ML Pipelines"</span>,
+            <span class="string">"GenAI"</span>,
+            <span class="string">Deep Learning & Medical Image Analysis"</span>,
+            <span class="string">"NLP & Computer Vision"</span>
+        ]
+        
+    <span class="keyword">def</span> <span class="function">current_focus</span>(<span class="param">self</span>):
+        <span class="keyword">return</span> <span class="string">"Building enterprise-grade AI systems"</span>
+                        </pre>
+                    </div>
+                    
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                        <div id="projects-count" class="stat-number" data-target="0">0</div>
+                        <div class="stat-label">Projects Built</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                        <div id="wins-count" class="stat-number" data-target="2">0</div>
+                        <div class="stat-label">Competition Wins</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+                        <div id="cert-count" class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-coffee"></i></div>
+                        <div class="stat-number" data-target="999">0</div>
+                        <div class="stat-label">Cups of Coffee</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-decorator">&lt;</span>
+                Tech Stack
+                <span class="title-decorator">/&gt;</span>
+            </h2>
+            <div class="skills-container">
+                <!-- AI/ML -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-brain"></i> AI/ML & Deep Learning
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="95">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="90">
+                            <span class="skill-name">PyTorch / TensorFlow</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="92">
+                            <span class="skill-name">LangChain / LangGraph</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="88">
+                            <span class="skill-name">Hugging Face / Transformers</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-server"></i> Backend & APIs
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="93">
+                            <span class="skill-name">FastAPI</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="85">
+                            <span class="skill-name">Spring Boot (Java)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="90">
+                            <span class="skill-name">Qdrant / Vector DBs</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="87">
+                            <span class="skill-name">Docker / Deployment</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Generative AI -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-robot"></i> Generative AI
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="94">
+                            <span class="skill-name">RAG Systems</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="88">
+                            <span class="skill-name">OpenAI / Gemini APIs</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="85">
+                            <span class="skill-name">Fine-tuning (LoRA/QLoRA)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="86">
+                            <span class="skill-name">Voice AI / Livekit</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i> Tools & Technologies
+                    </h3>
+                    <div class="tech-badges">
+                        <span class="tech-badge"><i class="fab fa-python"></i> Python</span>
+                        <span class="tech-badge"><i class="fab fa-java"></i> Java</span>
+                        <span class="tech-badge"><i class="fas fa-database"></i> SQL</span>
+                        <span class="tech-badge"><i class="fab fa-docker"></i> Docker</span>
+                        <span class="tech-badge"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="tech-badge"><i class="fas fa-cloud"></i> Azure</span>
+                        <span class="tech-badge"><i class="fas fa-code"></i> FastAPI</span>
+                        <span class="tech-badge"><i class="fas fa-fire"></i> PyTorch</span>
+                        <span class="tech-badge"><i class="fas fa-link"></i> LangChain</span>
+                        <span class="tech-badge"><i class="fas fa-search"></i> Qdrant</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-decorator">&lt;</span>
+                Featured Projects
+                <span class="title-decorator">/&gt;</span>
+            </h2>
+            <div class="projects-grid">
+                <!-- Data loaded dynamically via js/projects.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-decorator">&lt;</span>
+                Experience
+                <span class="title-decorator">/&gt;</span>
+            </h2>
+            <div class="timeline">
+                <!-- Data loaded dynamically via js/main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section certifications" id="certifications">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-decorator">&lt;</span>
+                Certifications
+                <span class="title-decorator">/&gt;</span>
+            </h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Deep Learning</h3>
+                    <p>NPTEL</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Large Language Models</h3>
+                    <p>NPTEL</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-robot"></i></div>
+                    <h3> Applied Linear Algebra for Signal Processing, Data Analytics and Machine Learning </h3>
+                    <p>NPTEL</p>
+                </div>
+                <a href="https://github.com/thanuja-bobbepalli/My_Certificates" target="_blank" class="cert-card view-all">
+                    <div class="cert-icon"><i class="fas fa-external-link-alt"></i></div>
+                    <h3>View All</h3>
+                    <p>GitHub</p>
+                    
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Stats Section -->
+    <section class="section github-stats" id="github">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-decorator">&lt;</span>
+                GitHub Activity
+                <span class="title-decorator">/&gt;</span>
+            </h2>
+            <div class="github-profile-wrapper">
+                <div class="github-card">
+                    <div class="gh-header">
+                        <div class="gh-avatar-container">
+                            <img src="assets/images/profile.jpeg" alt="Thanuja Bobbepalli" class="gh-avatar">
+                            <span class="gh-status-dot"></span>
+                        </div>
+                        <div class="gh-info">
+                            <h3>Thanuja Bobbepalli</h3>
+                            <span class="gh-username">@thanuja-bobbepalli</span>
+                        </div>
+                    </div>
+
+                    <div class="gh-stats-grid">
+                        <div class="gh-stat">
+                            <span class="gh-stat-value" id="gh-repos">--</span>
+                            <span class="gh-stat-label">Repositories</span>
+                        </div>
+                        <div class="gh-stat">
+                            <span class="gh-stat-value" id="gh-followers">--</span>
+                            <span class="gh-stat-label">Followers</span>
+                        </div>
+                        <div class="gh-stat">
+                            <span class="gh-stat-value" id="gh-following">--</span>
+                            <span class="gh-stat-label">Following</span>
+                        </div>
+                    </div>
+
+                    <div class="gh-graph-mock">
+                        <div class="gh-graph-title">
+                            <span>Activity Graph</span>
+                            <span style="color: var(--primary)">Last Year</span>
+                        </div>
+                        <!-- Calendar Container -->
+                        <div class="calendar">
+                            <!-- Loading message -->
+                            <div style="text-align: center; color: var(--text-muted); padding: 20px;">
+                                Loading contribution data...
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gh-footer">
+                        <a href="https://github.com/thanuja-bobbepalli" target="_blank" class="btn btn-secondary"
+                            style="width: 100%">
+                            <i class="fab fa-github"></i> View Full Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Demos Section -->
+    <section class="section demos" id="demos">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-decorator">&lt;</span>
+                Live Demos
+                <span class="title-decorator">/&gt;</span>
+            </h2>
+            <div class="demos-grid">
+                <div class="demo-card">
+                    <div class="demo-preview">
+                        <div class="demo-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Click to try</span>
+                        </div>
+                    </div>
+                    <div class="demo-info">
+                        <h3>Insurance Premium API</h3>
+                        <p>Try the live API with Swagger UI</p>
+                        <a href="https://insurence-premium-api.onrender.com/docs" target="_blank" class="demo-btn">
+                            <i class="fas fa-external-link-alt"></i> Open Demo
+                        </a>
+                    </div>
+                </div>
+                <div class="demo-card">
+                    <div class="demo-preview">
+                        <div class="demo-placeholder">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </div>
+                    </div>
+                    <div class="demo-info">
+                        <h3>RAG Chatbot</h3>
+                        <p>Document-based Q&A with LangChain</p>
+                        <a href="https://github.com/thanuja-bobbepalli/Chatbot" target="_blank" class="demo-btn">
+                            <i class="fab fa-github"></i> View Source
+                        </a>
+                    </div>
+                </div>
+                <div class="demo-card coming-soon">
+                    <div class="demo-preview">
+                        <div class="demo-placeholder">
+                            <i class="fas fa-rocket"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="demo-info">
+                        <h3>More Demos</h3>
+                        <p>Hugging Face Spaces & Streamlit apps</p>
+                        <span class="demo-badge">In Progress</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / What I Bring Section -->
+    <section class="section value-prop" id="value">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-decorator">&lt;</span>
+                What I Bring
+                <span class="title-decorator">/&gt;</span>
+            </h2>
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Production-Ready Code</h3>
+                    <p>I don't just build prototypes. My code is deployed in real products serving actual users.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI/ML Expertise</h3>
+                    <p>Deep understanding of RAG systems, vector search, embeddings, and LLM integration patterns.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Fast Learner</h3>
+                    <p>Quickly adapt to new technologies. Learned Livekit, Qdrant, and enterprise patterns on the job.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Team Player</h3>
+                    <p>Experience working in agile teams, code reviews, and collaborative development workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration Section -->
+    <section class="section collaboration" id="collaboration">
+        <div class="container">
+            <div class="collab-box">
+                <div class="collab-header">
+                    <div class="collab-status">
+                        <span class="status-indicator ripple"></span>
+                        <span class="status-text">OPEN_FOR_COLLABORATION</span>
+                    </div>
+                    <div class="collab-decoration">
+                        <span>/// ESTABLISH_UPLINK</span>
+                    </div>
+                </div>
+                <div class="collab-content">
+                    <div class="collab-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="collab-text">
+                        <h3>Interested in collaborating?</h3>
+                        <p>
+                            I'm always open to discussing new projects, creative ideas, or opportunities to be part of
+                            your visions.
+                            Whether it's building a complex AI agent, an RAG system, or a full-stack application, let's
+                            create something extraordinary together.
+                        </p>
+                    </div>
+                    <div class="collab-action">
+                        <a href="mailto:thanujabobbepalli@gmail.com?subject=Collaboration%20Opportunity&body=Hi%20Thanuja%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20discuss%20a%20potential%20collaboration.%0A%0A[Briefly%20describe%20your%20idea%20or%20project%20here]%0A%0ABest%20regards%2C%0A[Your%20Name]"
+                            class="btn btn-primary glow-pulse">
+                            <i class="fas fa-satellite-dish"></i> Start a Conversation
+                        </a>
+                    </div>
+                </div>
+                <div class="collab-background">
+                    <div class="grid-lines"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-decorator">&lt;</span>
+                Get In Touch
+                <span class="title-decorator">/&gt;</span>
+            </h2>
+
+            <!-- Availability Status -->
+            <div class="availability-status">
+                <span class="status-dot"></span>
+                <span class="status-text">Available for opportunities</span>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h3 class="contact-heading orbitron">Let's Build Something Amazing</h3>
+                    <p class="contact-description">
+                        I'm currently looking for new opportunities in AI/ML Engineering.
+                        Whether you have a project idea, job opportunity, or just want to say hi,
+                        I'll try my best to get back to you!
+                    </p>
+                    <div class="contact-terminal">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span> echo "Ready to transform your ideas into intelligent systems!"
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-grid">
+                    <a href="https://www.linkedin.com/in/thanuja-bobbepalli-289651253" target="_blank" class="contact-card-item"
+                        aria-label="Connect on LinkedIn">
+                        <div class="contact-icon-box"><i class="fab fa-linkedin-in"></i></div>
+                        <span class="contact-label">Connect professionally</span>
+                        <span class="contact-value">LinkedIn</span>
+                    </a>
+                    <a href="mailto:thanujabobbepalli@gmail.com" class="contact-card-item copy-email-btn"
+                        aria-label="Email Me">
+                        <div class="contact-icon-box"><i class="fas fa-envelope"></i></div>
+                        <span class="contact-label">Drop a mail</span>
+                        <span class="contact-value">thanujabobbepalli@gmail.com</span>
+                    </a>
+                </div>
+                <div class="contact-buttons">
+                    <a href="mailto:thanujabobbepalli@gmail.com" class="btn btn-primary btn-large glow-pulse copy-email-btn">
+                        <i class="fas fa-paper-plane"></i> Say Hello
+                    </a>
+                    <a href="assets/all_project_resume.pdf" class="btn btn-secondary btn-large" download>
+                        <i class="fas fa-file-download"></i> Download CV
+                    </a>
+                </div>
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    <span class="terminal-prompt">$</span> Designed & Built by
+                    <span class="accent">Thanuja Bobbepalli</span>
+                </p>
+                <div class="footer-links">
+                    <a href="https://github.com/thanuja-bobbepalli" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/thanuja-bobbepalli-289651253" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="mailto:thanujabobbepalli@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p class="footer-copyright">© 2026 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Email copied to clipboard!</div>
+
+    <!-- Scripts -->
+    <script src="js/projects.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

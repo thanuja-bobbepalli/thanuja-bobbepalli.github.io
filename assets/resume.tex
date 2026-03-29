@@ -1,0 +1,121 @@
+\documentclass{resume}
+
+\usepackage[left=0.4 in,top=0.3in,right=0.4 in,bottom=0.3in]{geometry}
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+\name{THANUJA BOBBEPALLI}
+
+\address{8977245422 \\ Vijayawada, Andhra Pradesh}
+
+\address{\href{mailto:thanujabobbepalli@gmail.com}{thanujabobbepalli@gmail.com} \\ 
+\href{https://github.com/thanuja-bobbepalli}{GitHub}}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+% SUMMARY
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{SUMMARY}
+Strong foundation in Generative AI, developing and working with transformer-based and deep learning models using PyTorch, with a clear understanding of neural network architectures, machine learning workflows, and RAG-based applications including chatbot systems.Interested in applying these skills to build solutions for real-world applications.
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% EDUCATION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+\begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+\textbf{Bachelor of Technology in Electronics and Communications} & 2024-2026 \\
+Rajiv Gandhi University Of Knowledge Technologies, Nuzvid, Andhra Pradesh & CGPA: 8.9\\
+\end{tabular*}
+
+\begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+\textbf{Pre-University Course (PUC)} & 2020--2022 \\
+Rajiv Gandhi University Of Knowledge Technologies, Nuzvid, Andhra Pradesh & CGPA: 9.44 \\
+\end{tabular*}
+
+\begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+\textbf{Secondary School (Class X)} & 2020 \\
+G.V.C High School, Thimmasamudhram, Andhra Pradesh & CGPA: 10 \\
+\end{tabular*}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% SKILLS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{SKILLS}
+
+\begin{tabular}{ @{} >{\bfseries}p{7.5 cm} @{\hspace{4ex}} p{10.5cm} }
+
+Programming Language & Python ,SQL \\
+
+AI/ML Frameworks & PyTorch, TensorFlow, Scikit-Learn \\
+
+Generative AI & LangChain, LangGraph, Langsmith, RAG agents, Fine-tuning(PEFT,LoRA/QLoRA)  \\
+Deep Learning \& Machine Learning & model development, training, evaluation, transfer learning\\
+APIs \&  Web developmeant & Streamlit, FastAPI, Pydantic ,Render \\
+MLOps \& Deployment & GitHub, Docker, Hugging Face \\
+
+\end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% PROJECTS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{PROJECTS}
+
+\begin{itemize}
+\itemsep -6pt
+
+\item \textbf{Hybrid CNN--Transformer Based Medical Image Segmentation for Liver and Lung CT Scans}  \\ Oct 2025 -- Jan 2026
+
+Designed a hybrid Transformer-CNN architecture that integrates global contextual information with convolutional feature extraction for medical image semantic segmentation. The model achieved strong performance on liver and lung segmentation, with \textbf{Dice scores of 96\%} and \textbf{HD95 values of 7.49 mm (liver) and 3.65 mm (lung)}. \\
+\textbf{The work has been submitted to third International Conference on Trends in
+Engineering Systems and Technologies (\textit{ICTEST--2026}) and is currently under review (\textit{paper ID:1037}).}
+\item \textbf{Chatbot (RAG \& Agentic AI system)}
+\hfill\href{https://github.com/thanuja-bobbepalli/Chatbot}{[GitHub]} \href{https://tha789-chatbot.streamlit.app/}{[App]} \\
+Developed a Retrieval-Augmented Generation (RAG) based chatbot capable of answering user queries using contextual document retrieval. Built an end-to-end pipeline involving text processing, embedding generation, and similarity-based retrieval to improve response relevance. Designed an agentic workflow using LangGraph to enable multi-step reasoning and tool-based interactions(MCP local server and client). Integrated LangSmith for tracing, debugging, and performance monitoring of LLM responses, and structured the system to handle dynamic conversational queries efficiently.
+
+\item \textbf{Hyperbolic U-Net for Liver Segmentation} \hfill \href{https://github.com/ai-mlclub-ece/Hyperbolic-Multi-Organ-Segmentation}{[GitHub]}   \\
+Developed a Hyperbolic U-Net by embedding decoder representations into hyperbolic space, enabling efficient modeling of hierarchical feature distributions in medical images. Leveraged curvature-aware transformations to improve feature separability and spatial consistency. The model achieved a \textbf{ 95\% } Dice score, surpassing Euclidean U-Net baselines, with notable gains in segmenting anatomically complex regions and preserving fine-grained boundaries.
+
+\item \textbf{Scientific Abstract Extreme Summarization using a GPT-2 Transformer} \hfill \href{https://github.com/thanuja-bobbepalli/Abstract-Extreame-Summarizer}{[GitHub]}   
+
+Implemented and fine-tuned a GPT-2 transformer in PyTorch on the arXiv dataset for scientific abstract summarization. Developed custom preprocessing, tokenization (BPE/tiktoken), training pipeline, and deployed the model on Hugging Face Spaces using Gradio.  
+
+\item \textbf{Pneumonia detection using X-ray images } \hfill \href{https://github.com/thanuja-bobbepalli/Pneumonia-detection-using-x-ray-imagesr}{[GitHub]} \href{https://pneumonia-detection-using-x-ray-images-tj9amadclyqx6tm6tz8hgx.streamlit.app/} {[App]} \\
+Developed a pneumonia detection model for pediatric chest X-ray images using VGG-16 and a custom CNN, addressing class imbalance and overfitting through data augmentation and regularization techniques. Achieved robust classification performance with improved generalization on unseen data. Containerized the application using Docker and deployed it as an interactive web app using Streamlit, enabling real-time prediction from uploaded X-ray images.
+
+
+\end{itemize}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{CERTIFICATIONS}
+
+\begin{itemize}
+\itemsep -3pt
+
+\item \textbf{Introduction to Machine Learning (NPTEL)} \hfill July -- October 2024
+
+\item \textbf{Deep Learning (IIT Ropar - NPTEL)} \hfill February -- May 2025
+
+\item \textbf{Applied Linear Algebra for Signal Processing, Data Analytics and Machine Learning} \hfill Jul -- Oct 2025
+
+\end{itemize}
+
+\end{rSection}
+
+\end{document}

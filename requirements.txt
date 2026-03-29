@@ -1,0 +1,17 @@
+langgraph
+requests
+python-dotenv
+
+fastapi
+uvicorn
+langchain
+langchain-groq
+langchain-community
+sentence-transformers
+faiss-cpu
+pydantic
+python-multipart
+PyPDF2
+langchain-google-genai
+langchain-huggingface
+google-generativeai
