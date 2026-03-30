@@ -171,24 +171,28 @@ def save_data(state: AgentState):
     all_projects = state['existing_data'] + state['processed_data']
     
     # Sort: Featured first, then by last_updated (newest first)
-    sorted_data = sorted(
-        all_projects, 
-        key=lambda x: (not x.get('featured', False), x.get('last_updated', '')), 
-        reverse=False # We want (False, newest_date) to come first.
-    )
-    
-    # Actually, to get Featured (True) at top AND Newest date at top:
-    # False < True, so 'not featured' (False for featured) comes first.
-    # For dates, '2024' > '2023'. So for reverse=False, we need a way to make newer dates 'smaller'.
-    # Or just use a more explicit sort:
     all_projects.sort(key=lambda x: x.get('last_updated', ''), reverse=True) # Newest first
     all_projects.sort(key=lambda x: x.get('featured', False), reverse=True) # Then Featured first
     sorted_data = all_projects
     
-    with open(data_path, 'w') as f:
-        json.dump(sorted_data, f, indent=2)
+    # 🔑 KEY FIX: Check if content actually changed before writing
+    new_content = json.dumps(sorted_data, indent=2)
     
-    print(f"Updated {data_path}. Analyzed {len(state['processed_data'])} new/updated repos. Kept {len(state['existing_data'])} from cache.")
+    try:
+        with open(data_path, 'r') as f:
+            existing_content = f.read()
+        
+        # Only write if content changed
+        if existing_content.strip() == new_content.strip():
+            print(f"✓ No changes detected. Skipping write. ({len(state['processed_data'])} analyzed, {len(state['existing_data'])} cached)")
+            return state
+    except FileNotFoundError:
+        pass  # File doesn't exist yet, so we need to create it
+    
+    with open(data_path, 'w') as f:
+        f.write(new_content)
+    
+    print(f"✓ Updated {data_path}. Analyzed {len(state['processed_data'])} new/updated repos. Kept {len(state['existing_data'])} from cache.")
     return state
 
 def should_continue(state: AgentState):

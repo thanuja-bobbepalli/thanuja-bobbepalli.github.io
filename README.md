@@ -208,6 +208,95 @@ This is a **next-generation portfolio** that combines:
 
 ---
 
+## � Scenarios & Commit Behavior
+
+### Scenario 1: Repository Updated - Changes Detected ✅
+
+```
+Timeline: Day 1, 12:00 AM
+GitHub Repos: Repo A updated with new code
+↓
+Cache System: Detects update (timestamp changed)
+↓
+AI Analysis: Analyzes Repo A + uses cached data for others
+↓
+Content Comparison: NEW JSON ≠ OLD JSON
+↓
+Result: 
+  ✓ Write to projects.json
+  ✓ Commit created: "chore: auto-update portfolio projects"
+  ✓ Portfolio deployed with new content
+```
+
+### Scenario 2: No Repository Changes - Nothing New ✅
+
+```
+Timeline: Day 2, 12:00 AM (24 hours after Day 1)
+GitHub Repos: ALL repos unchanged (same timestamps as Day 1)
+↓
+Cache System: All repos are cached (no AI analysis needed)
+↓
+Content Comparison: 
+  OLD JSON (from Day 1) = NEW JSON (generated today)
+  ✓ IDENTICAL!
+↓
+Result:
+  ✗ Skip write to disk (no file touched)
+  ✗ NO commit created
+  ✗ NO deployment
+  ✓ Print: "✓ No changes detected. Skipping write."
+```
+
+### Scenario 3: One Repo Updates After Days of No Change ✅
+
+```
+Timeline: Day 4, 12:00 AM
+GitHub Repos: Finally, Repo B gets updated
+↓
+Cache System: Detects change in Repo B only
+↓
+AI Analysis: Only Repo B analyzed (others from cache)
+↓
+Content Comparison: NEW JSON ≠ OLD JSON (Repo B data updated)
+↓
+Result:
+  ✓ Write to projects.json
+  ✓ Commit created: "chore: auto-update portfolio projects"
+  ✓ Portfolio deployed with Repo B updates
+```
+
+---
+
+## 📈 Commit Activity Over Time
+
+### Table 1: Commits Without Content Detection (Old Behavior)
+| Day | GitHub Updates | AI Analysis | Commits | Portfolio Deploy |
+|-----|---|---|---|---|
+| Day 1 | Repo A updated | ✓ Yes | 1 | ✓ Yes |
+| Day 2 | None | ✗ No | 1 ❌ (Empty) | ❌ Unnecessary |
+| Day 3 | None | ✗ No | 1 ❌ (Empty) | ❌ Unnecessary |
+| Day 4 | Repo B updated | ✓ Yes | 1 | ✓ Yes |
+| **Total** | **2 real changes** | — | **4 commits** | **2 real, 2 wasted** |
+
+### Table 2: Commits With Content Detection (New Behavior)
+| Day | GitHub Updates | AI Analysis | Content Changed? | Commits | Portfolio Deploy |
+|-----|---|---|---|---|---|
+| Day 1 | Repo A updated | ✓ Yes | ✓ Yes | 1 | ✓ Yes |
+| Day 2 | None | ✗ No | ✗ No | 0 | ✗ No |
+| Day 3 | None | ✗ No | ✗ No | 0 | ✗ No |
+| Day 4 | Repo B updated | ✓ Yes | ✓ Yes | 1 | ✓ Yes |
+| **Total** | **2 real changes** | — | **2 changes** | **2 commits** | **2 real, 0 wasted** |
+
+### Table 3: Real-World Example (30 Days)
+| Period | Scenario | Old System | New System |
+|--------|----------|-----------|-----------|
+| Days 1-7 | No repo updates | 7 commits | 1 commit (day 1 only) |
+| Days 8-14 | 1 repo updated on day 10 | 7+ commits | 2 commits (days 1 & 10) |
+| Days 15-30 | 2 repos updated (days 18, 25) | 16+ commits | 3 commits (days 1, 18, & 25) |
+| **Month Total** | **3 actual updates** | **~30 commits** | **6 commits** |
+
+---
+
 ## Project Structure
 
 ```
